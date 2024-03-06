@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import FunctionSimples from './exemplos/FunctionSimples';
+import FunctionDupla from './exemplos/FunctionDupla';
+import Button from './Componentes/Button';
 
 function App() {
 
@@ -25,8 +28,11 @@ function App() {
     <div className="App">
       <h1>O useEffect foi chamado {useEffectCounter} vezes</h1>
       {logado ? <p>Estou logado</p> : <p>Estou Deslogado</p>}
-      <button onClick={Logar}>Logar</button>
-      <button onClick={Deslogar}>Deslogar</button>
+      <Button tarefa={Logar} className="button blue" > Logar </Button>
+      <div>
+        <FunctionSimples></FunctionSimples>
+        <FunctionDupla></FunctionDupla>
+      </div>
     </div>
   );
 }
